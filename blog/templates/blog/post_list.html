@@ -7,12 +7,16 @@
             <h1><a href="/">error Blog</a></h1>
         </div>
 
+         {% for post in posts %}
         <div>
-            <p>опубликовано: 26.08.2020, 23:00</p>
+           <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+               <p>опубликовано: 26.08.2020, 23:00</p>
             <h2><a href="">мой первый пост</a></h2>
             <p>тут должно быть что-то интересное,но мне лень.</p>
-        </div>
-
         <div>
             <p>опубликовано: 26.08.2020, 23:01</p>
             <h2><a href="">2+2=5</a></h2>
